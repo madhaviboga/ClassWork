@@ -1,0 +1,38 @@
+public class A {
+	int i;
+	private int j;
+	void setij(int x,int y) {
+		i=x;
+		j=y;
+	}
+
+}
+class B extends A{
+	int total;
+	void sum() {
+		total=i+j;
+	}
+	
+}
+public class Access {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		B subob=new B();
+		subob.setij(10,12);
+		subob.sum();
+		System.out.println("total is "+subob.total);
+		
+
+	}
+
+}
+output:
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	The field A.j is not visible
+
+	at B.sum(A.java:14)
+	at Access.main(Access.java:8)
+	
+	
+	m
