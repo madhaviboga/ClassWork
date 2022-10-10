@@ -1,0 +1,25 @@
+public abstract class C {
+	abstract void callme();
+	void callmetoo() {
+		System.out.println("this is a concrete method");
+	}
+
+}
+class D extends C{
+	void callme() {
+		System.out.println("C's implementation of callme");
+	}
+}
+
+
+public class AbstractDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		C b=new C();
+		b.callme();
+		b.callmetoo();
+
+	}
+
+}
