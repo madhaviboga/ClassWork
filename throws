@@ -1,0 +1,16 @@
+public class ThrowsDemo {
+		static void throwone() throws IllegalAccessException {
+			System.out.println("inside throwsone");
+			throw new IllegalAccessException("demo");
+		}
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			try {
+				throwone();
+			}catch(IllegalAccessException e) {
+				System.out.println("caught "+e);
+			}
+
+		}
+
+	}
