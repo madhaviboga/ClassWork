@@ -1,0 +1,44 @@
+public class NewThread implements Runnable {
+	Thread t;
+	NewThread(){
+		t=new Thread(this,"Demo Thread");
+		System.out.println("child thread:"+t);
+	}
+	public void run() {
+		try {
+			for(int i=5;i>0;i--) {
+				System.out.println("child thread:"+t);
+				Thread.sleep(1000);
+			}
+		}catch(InterruptedException e) {
+			System.out.println("child interrupted");
+		}
+		System.out.println("exiting child thread");
+	}
+
+}
+
+public class ThreadDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		NewThread nt=new NewThread();
+		nt.t.start();
+		try {
+			for(int i=5;i>0;i--) {
+				System.out.println("main thread:"+i);
+				Thread.sleep(1000);
+			}
+		}catch(InterruptedException e) {
+			System.out.println("main thread interrupted");
+		}
+		System.out.println("exiting main thread");
+	}
+
+
+
+		
+	}
+
+
+
